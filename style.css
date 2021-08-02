@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   /* /* list-style: none; */
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .container {
@@ -37,9 +37,13 @@
   background-color: #ff9c00;
   width: 100%;
   margin-right: 2%;
-  margin-left: -20px;
+  margin-left: -6%;
   font-size: 30px;
   font-weight: 700;
+}
+
+.name p{
+  padding-left: 4%;
 }
 
 .contl {
@@ -47,14 +51,14 @@
   color: black;
   padding: 35% 4% 1% 1%;
 }
-.contl-item{
-    padding: 2%;
+.contl-item {
+  padding: 2%;
 }
 ul {
   list-style: none;
   padding-left: 4%;
 }
-ul li::before {
+.ul li::before {
   content: "\2022";
   color: #ff9c00;
   font-weight: bold;
@@ -87,7 +91,12 @@ ul li::before {
   padding: 3%;
   text-align: center;
   color: #ffffff;
+  margin-top: 2%;
+}
+i{
+  color: #ff9c00;
 }
 .itemcontent2 {
-  font: 30px;
+  padding: 5%;
+  color: darkgray;
 }

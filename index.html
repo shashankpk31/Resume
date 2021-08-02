@@ -4,25 +4,167 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Resume</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+        /* /* list-style: none; */
+        text-decoration: none;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "head head head";
+        position: relative;
+      }
+
+      .head {
+        display: flex;
+        z-index: 2;
+        grid-area: head;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2%;
+        margin-left: 4%;
+      }
+      .imgcode {
+        border-radius: 50%;
+        border: 2px solid black;
+        z-index: 3;
+        width: 20%;
+      }
+
+      .name {
+        padding: 5%;
+        background-color: #ff9c00;
+        width: 100%;
+        margin-right: 2%;
+        margin-left: -6%;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .name p {
+        padding-left: 4%;
+      }
+
+      .contl {
+        background-color: #ffffff;
+        color: black;
+        padding: 35% 4% 1% 1%;
+      }
+      .contl-item {
+        padding: 2%;
+      }
+      ul {
+        list-style: none;
+        padding-left: 4%;
+      }
+      .ul li::before {
+        content: "\2022";
+        color: #ff9c00;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+      .itemhead {
+        background-color: #ff9c00;
+        padding: 1%;
+        text-align: center;
+        width: 50%;
+        font-weight: 800;
+      }
+      .itemcontent {
+        font: 30px;
+        padding: 2%;
+      }
+
+      .contr {
+        background-color: #29292b;
+        color: rgb(56, 55, 55);
+        padding: 64% 1% 1% 4%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+      }
+      .itemhead2 {
+        border: 3px solid #ff9c00;
+        padding: 3%;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 2%;
+      }
+      h3 {
+        font-size: initial;
+      }
+      i {
+        color: #ff9c00;
+      }
+      .itemcontent2 {
+        padding: 5%;
+        color: darkgray;
+      }
+      @media only screen and (max-width: 700px) {
+        .container {
+          display: grid;
+          grid-template-columns: 55% 45%;
+          grid-template-areas: "head head";
+          position: relative;
+        }
+        .contl {
+          background-color: #ffffff;
+          color: black;
+          padding: 40% 4% 1% 1%;
+        }
+        .contr {
+          padding: 50% 1% 1% 4%;
+        }
+        .itemcontent2 {
+          padding: 0%;
+          color: darkgray;
+          margin: 10% 0% 10% 0%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <div class="head">
-        <img src="./avt.jpg" alt=""  class="imgcode"/>
-        <div class="name">Shashank Pathak</div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ThXz2KNQxqvhuejyAvZMu7z-n-iZ0v26yQ&usqp=CAU"
+          alt=""
+          class="imgcode"
+        />
+        <div class="name"><p>Shashank Pathak</p></div>
       </div>
       <div class="contl" id="contl">
         <div class="contl-item" id="item-1">
           <div class="itemhead">Experience</div>
           <div class="itemcontent">
-            Web Developement Enthusist <br>
-            Plasenta <br>
-            2020-Present <br>
-            <ul >
-              <li>I use Nodejs as a tool for backend Developent For more than 1 years</li>
-              <li>I use Reactjs as a tool for Frontend Developent For more than 0.5 years</li>
+            Web Developement Enthusist <br />
+            Plasenta <br />
+            2020-Present <br />
+            <ul class="ul">
+              <li>
+                I use Nodejs as a tool for backend Developent For more than 1
+                years
+              </li>
+              <li>
+                I use Reactjs as a tool for Frontend Developent For more than
+                0.5 years
+              </li>
             </ul>
           </div>
         </div>
@@ -30,27 +172,35 @@
           <div class="itemhead">Projects</div>
           <div class="itemcontent">
             <h3>Plasenta</h3>
-            <ul>
-              <li>This is basicaly a Student Project Tracking System Created By the help of MERN Stack</li>
+            <ul class="ul">
+              <li>
+                This is basicaly a Student Project Tracking System Created By
+                the help of MERN Stack
+              </li>
               <li>https://github.com/Random</li>
             </ul>
             <h3>Blog cms</h3>
-            <ul>
-              <li> This is basicaly a Blog management System Created By the help of Node & Express Stack</li>
+            <ul class="ul">
+              <li>
+                This is basicaly a Blog management System Created By the help of
+                Node & Express Stack
+              </li>
               <li>https://github.com/Random</li>
             </ul>
-
           </div>
         </div>
         <div class="contl-item" id="item-3">
           <div class="itemhead">Education</div>
           <div class="itemcontent">
-            <p>BCA(Bachelor's of computer Application) </p>
+            <p>BCA(Bachelor's of computer Application)</p>
             <p>St. Xavier's College Ahmedabad</p>
             <p>2019-2022</p>
-            <ul>
+            <ul class="ul">
               <li>Cummulative GPA 8.3</li>
-              <li>Relevent skills: Data Structue & Algo, Nodejs And React ,Computer Networks,Operating System</li>
+              <li>
+                Relevent skills: Data Structure & Algo, Nodejs And React
+                ,Computer Networks,Operating System
+              </li>
             </ul>
           </div>
         </div>
@@ -59,20 +209,25 @@
         <div class="contr-item" id="items-1">
           <div class="itemhead2">Contacts</div>
           <div class="itemcontent2">
-            <h3>Title</h3>
             <ul>
-              <li></li>
-              <li></li>
+              <li><i class="bx bxs-map"></i>&nbsp;Shivranjani,Ahmedabad</li>
+              <li>
+                <i class="bx bxs-envelope-open"></i>&nbsp;Shashankpk34@gmail
+              </li>
+              <li><i class="bx bxs-phone"></i>&nbsp;809073xxxx</li>
+              <li><i class="bx bxl-github"></i>&nbsp;github.com/Shashankpk</li>
             </ul>
           </div>
         </div>
         <div class="contr-item" id="items-2">
           <div class="itemhead2">Skills & Summary</div>
           <div class="itemcontent2">
-            <h3>Title</h3>
-            <ul>
-              <li></li>
-              <li></li>
+            <ul class="ul">
+              <li>Java Core & Spring Boot</li>
+              <li>Nodejs ,Reactjs & Expressjs</li>
+              <li>Html, css, Javascript</li>
+              <li>Problem Solving</li>
+              <li>Data Structure & Algo</li>
             </ul>
           </div>
         </div>
@@ -80,5 +235,4 @@
     </div>
     <script src="./index.js"></script>
   </body>
-  
 </html>
